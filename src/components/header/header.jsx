@@ -1,20 +1,42 @@
-import React from 'react';
-import './header.css';
+import React, {useRef} from 'react';
+import styles from './header.module.css';
 
 
-function Header() {
+function Header({onSearch}) {
+
+  const inputRef = useRef();
+  const handleSearch = () =>{
+    const value = inputRef.current.value;
+    onSearch(value);
+    
+  }
+
+  const onClick = () => {
+    handleSearch();
+  }
+
+  const onKeyPress = (event) => {
+    if(event.key === 'Enter'){
+      handleSearch();
+    }
+  }
+
   return (
-    <header className="header">
-      <div className="logo">
-        <i class="logo fab fa-youtube"></i>
-        <span class="logo-text">Youtube</span>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <img className={styles.img} src="images/logo.png" alt="logo"/>
+        <h1 className={styles.title}>Youtube</h1>
       </div>
-      <div className="search"> 
-          <input type="text" class="form-control" placeholder="search here!" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
-      </div>
+        <input className={styles.input} 
+        type="search" 
+        placeholder="Search..."  
+        ref={inputRef}
+        onKeyPress={onKeyPress}/>
+        <button className={styles.button} type="submit" onClick={onClick}>
+          <img className={styles.buttonImg} src="/images/search.png" alt="search"/>
+        </button> 
     </header>
   );
 }
 
-export default Header;
+export default Header; 

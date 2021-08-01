@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  padding-left: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.input {
+  margin-right: 0.2rem;
+  height: 40px;
+  flex-basis: 100%;
+  font-size: 1.2rem;
+  outline: 0;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.img {
+  padding: 0;
+}
+.title {
+  padding: 0.1em;
+  margin-top: 0.1em;
+  font-size: 1.8em;
+}
+
+.button {
+  margin-right: 0.2rem;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 0.4em;
+  outline: 0;
+}
+
+.buttonImg {
+  width: 100%;
+  height: 100%;
+}
