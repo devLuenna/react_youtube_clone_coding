@@ -1,0 +1,43 @@
+:root {
+  /* Color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Size */
+  --padding: 12px;
+  --padding-small: 6px;
+  --profile-size: 36px;
+
+  /* Font Size */
+  --font-large: 20px;
+  --font-regular: 16px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.fa-youtube {
+  color: var(--red-color);
+  margin-right: 3px;
+}
+.logo-text {
+  font-family: Roboto;
+}
+
+.search {
+  display: flex;
+}
