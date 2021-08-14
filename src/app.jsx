@@ -8,6 +8,8 @@ import Header from './components/header/header';
 function App() {
 
   const [videos, setVideos] = useState([]);
+  //clickedVideo 상태 만들기. 클릭이 되면 아예 다른 컴포넌트 랜더링하기
+  
 
   const search = (query) => {
     searchVideo(query)
